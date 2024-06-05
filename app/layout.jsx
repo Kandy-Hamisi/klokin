@@ -1,9 +1,9 @@
 import './globals.css';
 
-const APP_NAME = "PWA App";
-const APP_DEFAULT_TITLE = "My Awesome PWA App";
-const APP_TITLE_TEMPLATE = "%s - PWA App";
-const APP_DESCRIPTION = "Best PWA app in the world!";
+const APP_NAME = "Klokin App";
+const APP_DEFAULT_TITLE = "Innologic Klokin App";
+const APP_TITLE_TEMPLATE = "%s - Klokin App";
+const APP_DESCRIPTION = "An application to record realtime information about checking in for data collectors";
 
 export const metadata = {
   applicationName: APP_NAME,
