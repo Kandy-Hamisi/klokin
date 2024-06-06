@@ -4,6 +4,7 @@ import DateTimeDisplay from "./dateTimeDisplay/DateTimeDisplay";
 // admin components
 import ActionButton from "./admin/actionButton/ActionButton";
 import SiteDescriptionForm from "./admin/siteDescriptionForm/SiteDescriptionForm";
+import LoginForm from "./loginForm/LoginForm";
 
 
 export {
@@ -12,4 +13,5 @@ export {
 
     ActionButton,
     SiteDescriptionForm,
+    LoginForm,
 }
