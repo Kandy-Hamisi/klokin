@@ -5,6 +5,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import { useRouter } from 'next/navigation'
+import toast, { Toaster } from 'react-hot-toast'
 
 const RegisterForm = () => {
     // get the fullName, idNumber and also generate a unique key
@@ -35,15 +36,18 @@ const RegisterForm = () => {
             document.cookie = `uniqueKey=${uniqueKey}; path=/; max-age=${60*60*24*365}`;
             localStorage.setItem('uniqueKey', uniqueKey);
 
+            toast.success(response.data.message);
             router.push('/login'); // Redirect to dashboard page after successful registration
 
         } catch (error) {
             console.log(error);
+            toast.error(error)
         }
     }
 
   return (
     <form className='' onSubmit={handleSubmit}>
+      <Toaster />
       <div className='mb-4'>
         <label htmlFor="userName" className=''>Full Name<span className='text-red-500'>*</span></label>
         <input onChange={(e) => setUserName(e.target.value)} type="text" name="userName" className='mt-3 p-2 w-full bg-slate-200 border border-gray-500/40' placeholder="Enter Full Name.." id="" />

@@ -5,6 +5,7 @@ import axios from 'axios';
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import toast, { Toaster } from 'react-hot-toast';
 
 const LoginForm = () => {
 
@@ -45,6 +46,7 @@ const LoginForm = () => {
       const user = response.data.user;
 
       console.log(response.data);
+      toast.success(response.data.message);
 
       storeUser(user);
       router.push('/home'); // Redirect to home page after successful login
@@ -52,12 +54,14 @@ const LoginForm = () => {
       console.log("Login Successful", response.data);
     } catch (error) {
       console.log("Error: ", error);
+      toast.error('Failed to login. Please check your credentials and try again.');
     }
 
   }
 
   return (
     <form className='' onSubmit={handleSubmit}>
+      <Toaster />
       <div className='mb-4'>
         <label htmlFor="userName" className=''>Data Collector Username</label>
         <input onChange={(e) => setUserName(e.target.value)} type="text" name="userName" className='mt-3 p-2 w-full bg-slate-200 border border-gray-500/40' placeholder="Enter Username.." id="" />
