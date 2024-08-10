@@ -1,3 +1,4 @@
+import { GlobalProvider } from '@/context/globalContext';
 import './globals.css';
 
 const APP_NAME = "Klokin App";
@@ -48,7 +49,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="ltr">
       <head />
-      <body>{children}</body>
+      <GlobalProvider>
+        <body>{children}</body>
+      </GlobalProvider>
     </html>
   );
 }

@@ -1,4 +1,4 @@
-import { DateTimeDisplay, LoginForm, Navbar, RegisterForm } from "@/components";
+import { DateTimeDisplay, Navbar } from "@/components";
 import FieldSites from "@/sections/fieldSites/FieldSites";
 import Image from "next/image";
 
@@ -14,7 +14,7 @@ export default function Home() {
       </section>
       <section className='padding'>
         <section className="max-container">
-          <RegisterForm />
+          <FieldSites />
         </section>
       </section>
     </main>
