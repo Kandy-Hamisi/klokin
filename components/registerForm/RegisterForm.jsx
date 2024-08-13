@@ -60,6 +60,9 @@ const RegisterForm = () => {
       <div className='mt-4 w-full flex justify-center'>
         <button type='submit' className='text-center w-full bg-blue-400 text-white p-2'>Register</button>
       </div>
+      <div className='mt-4'>
+        <p className='text-sm'>Already Registered? <Link href="/login" className='text-blue-500'>Login</Link></p>
+      </div>
     </form>
   )
 }

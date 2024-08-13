@@ -8,7 +8,7 @@ const Navbar = () => {
         <h4 className='font-montserrat font-bold text-base'>Klokin</h4>
       </div>
       <div>
-        <Link href="/login" className='p-2 bg-blue-400 text-white'>Admins</Link>
+        <Link href="/admin/login" className='p-2 bg-blue-400 text-white'>Admins</Link>
       </div>
     </header>
   )
